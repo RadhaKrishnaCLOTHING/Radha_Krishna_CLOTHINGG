@@ -47,8 +47,10 @@ body {
     color: #000;
     font-size: 1.8rem;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .nav-menu {
@@ -928,6 +930,16 @@ body {
         display: flex;
     }
 
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-logo h1 {
+        font-size: 1.4rem;
+        letter-spacing: 0.2px;
+        line-height: 1.1;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -996,11 +1008,17 @@ body {
 
 @media (max-width: 480px) {
     .nav-container {
-        padding: 0 15px;
+        padding: 0 10px;
+    }
+
+    .nav-logo h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.1px;
+        line-height: 1.0;
     }
 
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .hero {
@@ -1009,7 +1027,11 @@ body {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
     .products {
@@ -1021,8 +1043,12 @@ body {
         gap: 1rem;
     }
 
-    .product-image {
-        height: 250px;
+    .amazon-image-container {
+        height: 180px;
+    }
+
+    .amazon-product-title {
+        font-size: 0.85rem;
     }
 
     .footer {
