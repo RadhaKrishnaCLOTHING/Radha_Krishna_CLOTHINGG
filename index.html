@@ -3,329 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavya - Elegant Embroidered Sequence Designer Lahenga Choli</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-            position: relative;
-        }
-
-        .home-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: white;
-            color: #ff6b6b;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .home-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .price {
-            font-size: 2em;
-            font-weight: bold;
-            color: #fff700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .product-content {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 40px;
-            gap: 40px;
-        }
-
-        .product-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-
-        .product-image img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .product-details {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section h2 {
-            color: #ff6b6b;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            border-bottom: 2px solid #ff6b6b;
-            padding-bottom: 5px;
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .detail-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #ff6b6b;
-        }
-
-        .detail-label {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .detail-value {
-            color: #666;
-        }
-
-        .order-section {
-            text-align: center;
-            padding: 40px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .order-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-            color: white;
-            padding: 20px 40px;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-            margin: 10px;
-        }
-
-        .order-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
-        }
-
-        .whatsapp-icon {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .feature {
-            background: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        @media (max-width: 768px) {
-            .product-content {
-                flex-direction: column;
-            }
-            
-            .header {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .home-btn {
-                position: static;
-                display: block;
-                width: fit-content;
-                margin: 0 auto 20px auto;
-            }
-        }
-    </style>
+    <title>RK Clothing Store - Premium Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <a href="https://radhakrishnaclothing.github.io/Radha_Krishna_CLOTHINGG/" class="home-btn">🏠 Home</a>
-            <h1>✨ Bhavya - Elegant Embroidered Sequence Designer Lahenga Choli With Dupatta ✨</h1>
-            <div class="price">💰 Price: ₹1,399</div>
-        </div>
-
-        <div class="product-content">
-            <div class="product-image">
-                <img src="https://via.placeholder.com/400x500/ff6b6b/ffffff?text=Elegant+Lehenga+Choli" alt="Elegant Embroidered Sequence Designer Lahenga Choli">
+    <!-- Header with Sticky Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>RK Clothing Store</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="product-details">
-                <div class="section">
-                    <h2>📦 Package Details</h2>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">Package Contains</div>
-                            <div class="detail-value">Lehenga, Choli & Dupatta</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Colors</div>
-                            <div class="detail-value">1 Color (Pink with Floral Prints)</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Stitching</div>
-                            <div class="detail-value">Semi Stitched</div>
-                        </div>
-                    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-pattern"></div>
+            </div>
+            <!-- Background Music -->
+            <audio id="bgMusic" loop>
+                <source src="music/krishna-flute.mp3" type="audio/mpeg">
+                <source src="music/krishna-flute.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="music-controls">
+                <button id="musicToggle" class="music-btn">
+                    <span class="music-icon">🎵</span>
+                    <span class="music-text">Play Music</span>
+                </button>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✨ New Arrival</span>
                 </div>
-
-                <div class="section">
-                    <h2>👗 Lehenga Details</h2>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">Fabric</div>
-                            <div class="detail-value">Tebby Organza</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Work</div>
-                            <div class="detail-value">Embroidery Sequence Work</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Inner</div>
-                            <div class="detail-value">Micro</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Length</div>
-                            <div class="detail-value">42 Inches</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Flair</div>
-                            <div class="detail-value">3.2 meter Flair</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Size</div>
-                            <div class="detail-value">Free Size</div>
-                        </div>
-                    </div>
+                <h1 class="hero-title">Premium <span class="gold-text">Collection</span></h1>
+                <p class="hero-subtitle">Experience luxury redefined with our exclusive range of designer clothin</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="cta-button primary">Explore Collection</a>
                 </div>
-
-                <div class="section">
-                    <h2>👚 Choli Details</h2>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">Fabric</div>
-                            <div class="detail-value">Tebby Organza</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Blouse</div>
-                            <div class="detail-value">0.8 mtr (Unstitched)</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Inner</div>
-                            <div class="detail-value">Crepe (0.8 Mtr)</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Sleeves</div>
-                            <div class="detail-value">3/4 Sleeves</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Work</div>
-                            <div class="detail-value">Embroidery Sequence Work</div>
-                        </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">👔</span>
+                        <span>Premium Quality</span>
                     </div>
-                </div>
-
-                <div class="section">
-                    <h2>🧣 Dupatta Details</h2>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <div class="detail-label">Fabric</div>
-                            <div class="detail-value">Tebby Organza</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Work</div>
-                            <div class="detail-value">Embroidery Sequence Work</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Length</div>
-                            <div class="detail-value">2.2 meter</div>
-                        </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚚</span>
+                        <span>Fast Delivery</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💎</span>
+                        <span>Luxury Brands</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="order-section">
-            <h2 style="color: #ff6b6b; margin-bottom: 20px;">🛍️ Ready to Order?</h2>
-            <a href="https://wa.me/9313057780?text=hiii%20i%20want%20to%20buy%20%E2%9C%A8Bhavya%E2%80%94%20%22Elegant%20Embroidered%20Sequence%20Designer%20Lahenga%20Choli%20With%20Dupatta%22%20" class="order-btn">
-                <span class="whatsapp-icon">📱</span>Order Now on WhatsApp
-            </a>
-            
-            <div class="features">
-                <div class="feature">✅ Premium Quality</div>
-                <div class="feature">✅ Fast Delivery</div>
-                <div class="feature">✅ Secure Payment</div>
-                <div class="feature">✅ Customer Support</div>
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="products-header">
+                    <h2 class="section-title">Our Products</h2>
+                    <div class="products-controls">
+                        <select class="sort-dropdown">
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Customer Rating</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                        <div class="view-options">
+                            <button class="view-btn active" data-view="grid">⊞</button>
+                            <button class="view-btn" data-view="list">☰</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-grid amazon-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card amazon-card">
+                        <div class="amazon-badge bestseller">Bestseller</div>
+                        <div class="amazon-image-container">
+                            <a href="https://radhakrishnaclothing.github.io/Radha_Krishna_CLOTHINGG/" target="_blank">
+    <img src="images/img1.jpg" width="200">
+</a>
+                            <div class="amazon-hover-actions">
+                                <button class="amazon-action-btn quick-view">Quick View</button>
+                                <button class="amazon-action-btn add-to-wishlist">♥</button>
+                            </div>
+                        </div>
+                        <div class="amazon-product-info">
+                            <div class="amazon-product-category">Premium Basics</div>
+                            <h3 class="amazon-product-title">Classic T-Shirt</h3>
+                            <div class="amazon-rating">
+                                <span class="amazon-stars">★★★★★</span>
+                                <span class="amazon-rating-count">(128)</span>
+                                <span class="amazon-rating-text">4.5 out of 5 stars</span>
+                            </div>
+                            <div class="amazon-price-section">
+                                <span class="amazon-currency">¥</span>
+                                <span class="amazon-price">899</span>
+                                <span class="amazon-original-price">¥1,299</span>
+                                <span class="amazon-discount">31% off</span>
+                            </div>
+                            <div class="amazon-prime-badge">
+                                <span class="prime-logo">prime</span>
+                                <span class="prime-text">FREE Delivery</span>
+                            </div>
+                            <div class="amazon-product-meta">
+                                <span class="amazon-code">TS-101</span>
+                                <span class="amazon-stock">In Stock</span>
+                            </div>
+                            <div class="amazon-actions">
+                                <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20TS-101" 
+                                   class="amazon-order-btn" target="_blank">
+                                    <span class="amazon-btn-icon">🛒</span>
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card amazon-card">
+                        <div class="amazon-badge exclusive">Exclusive</div>
+                        <div class="amazon-image-container">
+                            <img src="images/product2.jpg" alt="Premium Hoodie" loading="lazy" class="amazon-product-image">
+                            <div class="amazon-hover-actions">
+                                <button class="amazon-action-btn quick-view">Quick View</button>
+                                <button class="amazon-action-btn add-to-wishlist">♥</button>
+                            </div>
+                        </div>
+                        <div class="amazon-product-info">
+                            <div class="amazon-product-category">Designer Wear</div>
+                            <h3 class="amazon-product-title">Premium Hoodie</h3>
+                            <div class="amazon-rating">
+                                <span class="amazon-stars">★★★★★</span>
+                                <span class="amazon-rating-count">(89)</span>
+                                <span class="amazon-rating-text">4.7 out of 5 stars</span>
+                            </div>
+                            <div class="amazon-price-section">
+                                <span class="amazon-currency">¥</span>
+                                <span class="amazon-price">1,599</span>
+                                <span class="amazon-original-price">¥2,199</span>
+                                <span class="amazon-discount">27% off</span>
+                            </div>
+                            <div class="amazon-prime-badge">
+                                <span class="prime-logo">prime</span>
+                                <span class="prime-text">FREE Delivery</span>
+                            </div>
+                            <div class="amazon-product-meta">
+                                <span class="amazon-code">HD-202</span>
+                                <span class="amazon-stock">In Stock</span>
+                            </div>
+                            <div class="amazon-actions">
+                                <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20HD-202" 
+                                   class="amazon-order-btn" target="_blank">
+                                    <span class="amazon-btn-icon">🛒</span>
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card amazon-card">
+                        <div class="amazon-badge new">New</div>
+                        <div class="amazon-image-container">
+                            <img src="images/product3.jpg" alt="Denim Jeans" loading="lazy" class="amazon-product-image">
+                            <div class="amazon-hover-actions">
+                                <button class="amazon-action-btn quick-view">Quick View</button>
+                                <button class="amazon-action-btn add-to-wishlist">♥</button>
+                            </div>
+                        </div>
+                        <div class="amazon-product-info">
+                            <div class="amazon-product-category">Casual Wear</div>
+                            <h3 class="amazon-product-title">Denim Jeans</h3>
+                            <div class="amazon-rating">
+                                <span class="amazon-stars">★★★★☆</span>
+                                <span class="amazon-rating-count">(156)</span>
+                                <span class="amazon-rating-text">4.2 out of 5 stars</span>
+                            </div>
+                            <div class="amazon-price-section">
+                                <span class="amazon-currency">¥</span>
+                                <span class="amazon-price">2,299</span>
+                                <span class="amazon-original-price">¥2,999</span>
+                                <span class="amazon-discount">23% off</span>
+                            </div>
+                            <div class="amazon-prime-badge">
+                                <span class="prime-logo">prime</span>
+                                <span class="prime-text">FREE Delivery</span>
+                            </div>
+                            <div class="amazon-product-meta">
+                                <span class="amazon-code">DJ-303</span>
+                                <span class="amazon-stock">In Stock</span>
+                            </div>
+                            <div class="amazon-actions">
+                                <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20DJ-303" 
+                                   class="amazon-order-btn" target="_blank">
+                                    <span class="amazon-btn-icon">🛒</span>
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card amazon-card">
+                        <div class="amazon-badge">Popular</div>
+                        <div class="amazon-image-container">
+                            <img src="images/product4.jpg" alt="Casual Shirt" loading="lazy" class="amazon-product-image">
+                            <div class="amazon-hover-actions">
+                                <button class="amazon-action-btn quick-view">Quick View</button>
+                                <button class="amazon-action-btn add-to-wishlist">♥</button>
+                            </div>
+                        </div>
+                        <div class="amazon-product-info">
+                            <div class="amazon-product-category">Formal Wear</div>
+                            <h3 class="amazon-product-title">Casual Shirt</h3>
+                            <div class="amazon-rating">
+                                <span class="amazon-stars">★★★★★</span>
+                                <span class="amazon-rating-count">(203)</span>
+                                <span class="amazon-rating-text">4.6 out of 5 stars</span>
+                            </div>
+                            <div class="amazon-price-section">
+                                <span class="amazon-currency">¥</span>
+                                <span class="amazon-price">1,199</span>
+                                <span class="amazon-original-price">¥1,799</span>
+                                <span class="amazon-discount">33% off</span>
+                            </div>
+                            <div class="amazon-prime-badge">
+                                <span class="prime-logo">prime</span>
+                                <span class="prime-text">FREE Delivery</span>
+                            </div>
+                            <div class="amazon-product-meta">
+                                <span class="amazon-code">CS-404</span>
+                                <span class="amazon-stock">In Stock</span>
+                            </div>
+                            <div class="amazon-actions">
+                                <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20CS-404" 
+                                   class="amazon-order-btn" target="_blank">
+                                    <span class="amazon-btn-icon">🛒</span>
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card amazon-card">
+                        <div class="amazon-badge trending">Trending</div>
+                        <div class="amazon-image-container">
+                            <img src="images/product5.jpg" alt="Sports Jacket" loading="lazy" class="amazon-product-image">
+                            <div class="amazon-hover-actions">
+                                <button class="amazon-action-btn quick-view">Quick View</button>
+                                <button class="amazon-action-btn add-to-wishlist">♥</button>
+                            </div>
+                        </div>
+                        <div class="amazon-product-info">
+                            <div class="amazon-product-category">Sports Wear</div>
+                            <h3 class="amazon-product-title">Sports Jacket</h3>
+                            <div class="amazon-rating">
+                                <span class="amazon-stars">★★★★★</span>
+                                <span class="amazon-rating-count">(167)</span>
+                                <span class="amazon-rating-text">4.8 out of 5 stars</span>
+                            </div>
+                            <div class="amazon-price-section">
+                                <span class="amazon-currency">¥</span>
+                                <span class="amazon-price">1,899</span>
+                                <span class="amazon-original-price">¥2,599</span>
+                                <span class="amazon-discount">27% off</span>
+                            </div>
+                            <div class="amazon-prime-badge">
+                                <span class="prime-logo">prime</span>
+                                <span class="prime-text">FREE Delivery</span>
+                            </div>
+                            <div class="amazon-product-meta">
+                                <span class="amazon-code">SJ-505</span>
+                                <span class="amazon-stock">In Stock</span>
+                            </div>
+                            <div class="amazon-actions">
+                                <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20SJ-505" 
+                                   class="amazon-order-btn" target="_blank">
+                                    <span class="amazon-btn-icon">🛒</span>
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card amazon-card">
+                        <div class="amazon-badge">Limited</div>
+                        <div class="amazon-image-container">
+                            <img src="images/product6.jpg" alt="Formal Pants" loading="lazy" class="amazon-product-image">
+                            <div class="amazon-hover-actions">
+                                <button class="amazon-action-btn quick-view">Quick View</button>
+                                <button class="amazon-action-btn add-to-wishlist">♥</button>
+                            </div>
+                        </div>
+                        <div class="amazon-product-info">
+                            <div class="amazon-product-category">Business Wear</div>
+                            <h3 class="amazon-product-title">Formal Pants</h3>
+                            <div class="amazon-rating">
+                                <span class="amazon-stars">★★★★☆</span>
+                                <span class="amazon-rating-count">(94)</span>
+                                <span class="amazon-rating-text">4.1 out of 5 stars</span>
+                            </div>
+                            <div class="amazon-price-section">
+                                <span class="amazon-currency">¥</span>
+                                <span class="amazon-price">1,499</span>
+                                <span class="amazon-original-price">¥1,999</span>
+                                <span class="amazon-discount">25% off</span>
+                            </div>
+                            <div class="amazon-prime-badge">
+                                <span class="prime-logo">prime</span>
+                                <span class="prime-text">FREE Delivery</span>
+                            </div>
+                            <div class="amazon-product-meta">
+                                <span class="amazon-code">FP-606</span>
+                                <span class="amazon-stock">In Stock</span>
+                            </div>
+                            <div class="amazon-actions">
+                                <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20FP-606" 
+                                   class="amazon-order-btn" target="_blank">
+                                    <span class="amazon-btn-icon">🛒</span>
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RK Clothing Store</h3>
+                    <p>Your destination for premium quality clothing</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Phone: +91 93130 57780</p>
+                    <p>Email: ashing2952022@gmail.com</p>
+                    <p>WhatsApp: <a href="https://wa.me/9313057780">+91 93130 57780</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RK Clothing Store. All rights reserved.</p>
             </div>
         </div>
-    </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
