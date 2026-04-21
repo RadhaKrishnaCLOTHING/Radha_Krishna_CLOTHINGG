@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya - Elegant Embroidered Sequence Designer Lahenga Choli | Radha Krishna Clothing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: #1a1a1a;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .home-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .home-link:hover {
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .product-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        .product-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 60px 40px;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .detail-item {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        .detail-item:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-value {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .order-section {
+            background: #1a1a1a;
+            padding: 80px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .order-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .order-subtitle {
+            font-size: 1.1em;
+            color: #ccc;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .order-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .order-btn:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        .trust-badge-icon {
+            font-size: 1.2em;
+        }
+
+        .footer {
+            background: #0a0a0a;
+            color: #888;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .product-content {
+                flex-direction: column;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+            
+            .product-header {
+                padding: 40px 20px;
+            }
+            
+            .product-title {
+                font-size: 2em;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .order-section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="https://radhakrishnaclothing.github.io/Radha_Krishna_CLOTHINGG/" class="brand">Radha Krishna Clothing</a>
+                <a href="https://radhakrishnaclothing.github.io/Radha_Krishna_CLOTHINGG/" class="home-link">← Back to Collection</a>
+            </div>
+        </nav>
+
+        <header class="product-header">
+            <h1 class="product-title">Bhavya - Elegant Embroidered Sequence Designer Lahenga Choli With Dupatta</h1>
+            <p class="product-subtitle">Exquisite craftsmanship meets contemporary design</p>
+            <div class="price-badge">₹1,399</div>
+        </header>
+
+        <main class="product-content">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/500x700/f5f5f5/333333?text=Bhavya+Elegant+Lehenga+Collection" alt="Elegant Embroidered Sequence Designer Lahenga Choli">
+            </div>
+
+            <div class="product-details">
+                <section class="section">
+                    <h2 class="section-title">Product Overview</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">Package Contains</div>
+                            <div class="detail-value">Lehenga, Choli & Dupatta</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Available Color</div>
+                            <div class="detail-value">Pink with Floral Prints</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Stitching Type</div>
+                            <div class="detail-value">Semi Stitched</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Lehenga Specifications</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">Fabric</div>
+                            <div class="detail-value">Tebby Organza</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Work Detail</div>
+                            <div class="detail-value">Embroidery Sequence Work</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Inner Lining</div>
+                            <div class="detail-value">Micro</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Length</div>
+                            <div class="detail-value">42 Inches</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Flair</div>
+                            <div class="detail-value">3.2 Meter</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Size</div>
+                            <div class="detail-value">Free Size</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Choli Specifications</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">Fabric</div>
+                            <div class="detail-value">Tebby Organza</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Blouse Material</div>
+                            <div class="detail-value">0.8 Meter (Unstitched)</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Inner Fabric</div>
+                            <div class="detail-value">Crepe (0.8 Meter)</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Sleeve Style</div>
+                            <div class="detail-value">3/4 Sleeves</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Work Detail</div>
+                            <div class="detail-value">Embroidery Sequence Work</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Dupatta Specifications</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">Fabric</div>
+                            <div class="detail-value">Tebby Organza</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Work Detail</div>
+                            <div class="detail-value">Embroidery Sequence Work</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Length</div>
+                            <div class="detail-value">2.2 Meter</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <section class="order-section">
+            <h2 class="order-title">Ready to Order?</h2>
+            <p class="order-subtitle">Contact us directly on WhatsApp for immediate assistance</p>
+            <a href="https://wa.me/9313057780?text=Hello%2C%20I%20would%20like%20to%20purchase%20the%20Bhavya%20Elegant%20Embroidered%20Sequence%20Designer%20Lahenga%20Choli%20With%20Dupatta%20priced%20at%20%E2%82%B91399" class="order-btn">Order via WhatsApp</a>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">✓</span>
+                    <span>Premium Quality Assurance</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">✓</span>
+                    <span>Secure Packaging</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">✓</span>
+                    <span>Customer Support</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">✓</span>
+                    <span>Authentic Products</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Radha Krishna Clothing. All rights reserved. | Premium Ethnic Wear Collection</p>
+        </footer>
+    </div>
+</body>
+</html>
