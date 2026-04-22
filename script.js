@@ -173,18 +173,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Product image link clicks
+    const productImageLinks = document.querySelectorAll('.product-image-link');
+    productImageLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productId = link.dataset.product;
+            const card = link.closest('.amazon-card');
+            const title = card.querySelector('.amazon-product-title').textContent;
+            const price = card.querySelector('.amazon-price').textContent;
+            const code = card.querySelector('.amazon-code').textContent;
+            
+            // Create detailed product modal
+            createDetailedProductModal(productId, title, price, code);
+        });
+    });
+    
     // Quick View functionality
     const quickViewBtns = document.querySelectorAll('.quick-view');
     quickViewBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            const productId = btn.dataset.product;
             const card = btn.closest('.amazon-card');
             const title = card.querySelector('.amazon-product-title').textContent;
             const price = card.querySelector('.amazon-price').textContent;
             const code = card.querySelector('.amazon-code').textContent;
             
-            // Create quick view modal
-            createQuickViewModal(title, price, code);
+            // Create detailed product modal
+            createDetailedProductModal(productId, title, price, code);
         });
     });
     
@@ -240,6 +257,159 @@ function createQuickViewModal(title, price, code) {
             modal.remove();
         }
     });
+}
+
+// Detailed Product Modal
+function createDetailedProductModal(productId, title, price, code) {
+    const productDetails = getProductDetails(productId);
+    
+    const modal = document.createElement('div');
+    modal.className = 'product-detail-modal';
+    modal.innerHTML = `
+        <div class="modal-content product-detail-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-detail-grid">
+                <div class="product-detail-image">
+                    <img src="images/product${productId.split('-')[1]}.jpg" alt="${title}">
+                </div>
+                <div class="product-detail-info">
+                    <h2>${title}</h2>
+                    <div class="product-detail-rating">
+                        <span class="stars">${productDetails.rating}</span>
+                        <span class="rating-text">${productDetails.ratingText}</span>
+                    </div>
+                    <div class="product-detail-price">
+                        <span class="current-price">¥${price}</span>
+                        <span class="original-price">¥${productDetails.originalPrice}</span>
+                        <span class="discount">${productDetails.discount}</span>
+                    </div>
+                    <p class="product-description">${productDetails.description}</p>
+                    <div class="product-features">
+                        <h4>Features:</h4>
+                        <ul>
+                            ${productDetails.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <strong>Material:</strong> ${productDetails.material}
+                        </div>
+                        <div class="spec-item">
+                            <strong>Care Instructions:</strong> ${productDetails.care}
+                        </div>
+                        <div class="spec-item">
+                            <strong>Sizes Available:</strong> ${productDetails.sizes.join(', ')}
+                        </div>
+                        <div class="spec-item">
+                            <strong>Stock Status:</strong> <span class="in-stock">In Stock</span>
+                        </div>
+                    </div>
+                    <div class="product-detail-actions">
+                        <a href="https://wa.me/9313057780?text=I%20want%20to%20order%20Product%20Code%20${code.toUpperCase()}" 
+                           class="modal-order-btn" target="_blank">
+                            <span>ð</span> Order Now via WhatsApp
+                        </a>
+                        <button class="add-to-cart-btn">
+                            <span>+</span> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Close modal
+    modal.querySelector('.close-modal').addEventListener('click', () => {
+        modal.remove();
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+    
+    // Add to cart functionality
+    modal.querySelector('.add-to-cart-btn').addEventListener('click', () => {
+        showNotification('Added to cart!');
+        modal.remove();
+    });
+}
+
+// Get product details based on product ID
+function getProductDetails(productId) {
+    const details = {
+        'ts-101': {
+            rating: 'âââââ',
+            ratingText: '4.5 out of 5 stars (128 reviews)',
+            originalPrice: '1299',
+            discount: '31% off',
+            description: 'Premium quality classic t-shirt made from 100% organic cotton. Features a comfortable fit and durable fabric that lasts wash after wash.',
+            features: ['100% Organic Cotton', 'Comfortable Fit', 'Machine Washable', 'Available in 5 Colors'],
+            material: 'Organic Cotton',
+            care: 'Machine wash cold, tumble dry low',
+            sizes: ['S', 'M', 'L', 'XL', 'XXL']
+        },
+        'hd-202': {
+            rating: 'âââââ',
+            ratingText: '4.7 out of 5 stars (89 reviews)',
+            originalPrice: '2199',
+            discount: '27% off',
+            description: 'Luxury hoodie with premium fleece lining and modern design. Perfect for casual outings and comfortable lounging.',
+            features: ['Premium Fleece', 'Kangaroo Pocket', 'Adjustable Hood', 'Ribbed Cuffs'],
+            material: 'Premium Fleece',
+            care: 'Machine wash cold, hang dry',
+            sizes: ['S', 'M', 'L', 'XL']
+        },
+        'dj-303': {
+            rating: 'âââââ',
+            ratingText: '4.2 out of 5 stars (156 reviews)',
+            originalPrice: '2999',
+            discount: '23% off',
+            description: 'Classic denim jeans with modern fit and premium quality denim. Features durable stitching and comfortable stretch.',
+            features: ['Premium Denim', 'Stretch Fabric', 'Classic Fit', 'Durable Stitching'],
+            material: 'Denim with Stretch',
+            care: 'Machine wash cold, tumble dry medium',
+            sizes: ['28', '30', '32', '34', '36']
+        },
+        'cs-404': {
+            rating: 'âââââ',
+            ratingText: '4.6 out of 5 stars (203 reviews)',
+            originalPrice: '1799',
+            discount: '33% off',
+            description: 'Versatile casual shirt perfect for both office and casual occasions. Made from breathable fabric with modern cut.',
+            features: ['Breathable Fabric', 'Modern Cut', 'Button-Down Collar', 'Easy Iron'],
+            material: 'Cotton Blend',
+            care: 'Machine wash warm, iron medium',
+            sizes: ['S', 'M', 'L', 'XL']
+        },
+        'sj-505': {
+            rating: 'âââââ',
+            ratingText: '4.8 out of 5 stars (167 reviews)',
+            originalPrice: '2599',
+            discount: '27% off',
+            description: 'High-performance sports jacket designed for active lifestyle. Features moisture-wicking fabric and ergonomic design.',
+            features: ['Moisture-Wicking', 'Lightweight', 'Zippered Pockets', 'Reflective Details'],
+            material: 'Performance Fabric',
+            care: 'Machine wash cold, hang dry',
+            sizes: ['S', 'M', 'L', 'XL', 'XXL']
+        },
+        'fp-606': {
+            rating: 'âââââ',
+            ratingText: '4.1 out of 5 stars (94 reviews)',
+            originalPrice: '1999',
+            discount: '25% off',
+            description: 'Professional formal pants perfect for business meetings and formal events. Features wrinkle-resistant fabric.',
+            features: ['Wrinkle-Resistant', 'Classic Fit', 'Belt Loops', 'Pleated Design'],
+            material: 'Wool Blend',
+            care: 'Dry clean recommended',
+            sizes: ['30', '32', '34', '36', '38']
+        }
+    };
+    
+    return details[productId] || details['ts-101'];
 }
 
 // Notification system
