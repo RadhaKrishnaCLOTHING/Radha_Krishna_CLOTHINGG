@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Clothing Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #343a40;
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .clothing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .clothing-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .clothing-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .clothing-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .clothing-item:hover .clothing-image {
+            transform: scale(1.05);
+        }
+
+        .clothing-details {
+            padding: 1.5rem;
+        }
+
+        .clothing-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list li {
+            padding: 0.3rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li:before {
+            content: "â";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .size-pricing {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .size-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .size-item {
+            text-align: center;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .size-item:hover {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+            transform: scale(1.05);
+        }
+
+        .size-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .size-price {
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .price-tag {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .clothing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .clothing-image {
+                height: 300px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .clothing-image {
+                height: 250px;
+            }
+            
+            .size-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .clothing-details {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Premium Clothing Collection</h1>
+            <p>Discover our exclusive range of quality apparel</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="clothing-grid">
+                <div class="clothing-item">
+                    <div>
+                        <img src="img/RK 0021.jpg" alt="Premium Collection Item 1" class="clothing-image" 
+                             onerror="this.src='https://via.placeholder.com/400x350?text=Image+Not+Found'">
+                    </div>
+                    <div class="clothing-details">
+                        <h3 class="clothing-title">Premium Collection Item 1</h3>
+                        <ul class="feature-list">
+                            <li>High-quality fabric material</li>
+                            <li>Comfortable and breathable</li>
+                            <li>Modern stylish design</li>
+                            <li>Durable stitching</li>
+                            <li>Available in multiple sizes</li>
+                        </ul>
+                        <div class="size-pricing">
+                            <h4 class="size-title">Available Sizes & Pricing</h4>
+                            <div class="size-grid">
+                                <div class="size-item">
+                                    <div class="size-label">S</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">M</div>
+                                    <div class="size-price price-tag">â¹499</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">L</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XL</div>
+                                    <div class="size-price price-tag">â¹509</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XXL</div>
+                                    <div class="size-price price-tag">â¹519</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">3XL</div>
+                                    <div class="size-price price-tag">â¹529</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">4XL</div>
+                                    <div class="size-price price-tag">â¹539</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clothing-item">
+                    <div>
+                        <img src="img/RK 0022.jpg" alt="Premium Collection Item 2" class="clothing-image" 
+                             onerror="this.src='https://via.placeholder.com/400x350?text=Image+Not+Found'">
+                    </div>
+                    <div class="clothing-details">
+                        <h3 class="clothing-title">Premium Collection Item 2</h3>
+                        <ul class="feature-list">
+                            <li>Premium cotton blend</li>
+                            <li>Perfect fit for all body types</li>
+                            <li>Trendy and fashionable</li>
+                            <li>Easy to maintain</li>
+                            <li>Long-lasting colors</li>
+                        </ul>
+                        <div class="size-pricing">
+                            <h4 class="size-title">Available Sizes & Pricing</h4>
+                            <div class="size-grid">
+                                <div class="size-item">
+                                    <div class="size-label">S</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">M</div>
+                                    <div class="size-price price-tag">â¹499</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">L</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XL</div>
+                                    <div class="size-price price-tag">â¹509</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XXL</div>
+                                    <div class="size-price price-tag">â¹519</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">3XL</div>
+                                    <div class="size-price price-tag">â¹529</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">4XL</div>
+                                    <div class="size-price price-tag">â¹539</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clothing-item">
+                    <div>
+                        <img src="img/RK 0023.jpg" alt="Premium Collection Item 3" class="clothing-image" 
+                             onerror="this.src='https://via.placeholder.com/400x350?text=Image+Not+Found'">
+                    </div>
+                    <div class="clothing-details">
+                        <h3 class="clothing-title">Premium Collection Item 3</h3>
+                        <ul class="feature-list">
+                            <li>Soft and comfortable fabric</li>
+                            <li>Elegant design patterns</li>
+                            <li>Perfect for all occasions</li>
+                            <li>Skin-friendly material</li>
+                            <li>Available in vibrant colors</li>
+                        </ul>
+                        <div class="size-pricing">
+                            <h4 class="size-title">Available Sizes & Pricing</h4>
+                            <div class="size-grid">
+                                <div class="size-item">
+                                    <div class="size-label">S</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">M</div>
+                                    <div class="size-price price-tag">â¹499</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">L</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XL</div>
+                                    <div class="size-price price-tag">â¹509</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XXL</div>
+                                    <div class="size-price price-tag">â¹519</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">3XL</div>
+                                    <div class="size-price price-tag">â¹529</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">4XL</div>
+                                    <div class="size-price price-tag">â¹539</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clothing-item">
+                    <div>
+                        <img src="img/RK 0024.jpg" alt="Premium Collection Item 4" class="clothing-image" 
+                             onerror="this.src='https://via.placeholder.com/400x350?text=Image+Not+Found'">
+                    </div>
+                    <div class="clothing-details">
+                        <h3 class="clothing-title">Premium Collection Item 4</h3>
+                        <ul class="feature-list">
+                            <li>Designer quality fabric</li>
+                            <li>Contemporary style</li>
+                            <li>Perfect for casual and formal wear</li>
+                            <li>Resistant to fading</li>
+                            <li>Comfortable all-day wear</li>
+                        </ul>
+                        <div class="size-pricing">
+                            <h4 class="size-title">Available Sizes & Pricing</h4>
+                            <div class="size-grid">
+                                <div class="size-item">
+                                    <div class="size-label">S</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">M</div>
+                                    <div class="size-price price-tag">â¹499</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">L</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XL</div>
+                                    <div class="size-price price-tag">â¹509</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XXL</div>
+                                    <div class="size-price price-tag">â¹519</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">3XL</div>
+                                    <div class="size-price price-tag">â¹529</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">4XL</div>
+                                    <div class="size-price price-tag">â¹539</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clothing-item">
+                    <div>
+                        <img src="img/RK 0025.jpg" alt="Premium Collection Item 5" class="clothing-image" 
+                             onerror="this.src='https://via.placeholder.com/400x350?text=Image+Not+Found'">
+                    </div>
+                    <div class="clothing-details">
+                        <h3 class="clothing-title">Premium Collection Item 5</h3>
+                        <ul class="feature-list">
+                            <li>Luxury fabric quality</li>
+                            <li>Sophisticated design</li>
+                            <li>Perfect gift option</li>
+                            <li>Premium finish</li>
+                            <li>Exclusive collection piece</li>
+                        </ul>
+                        <div class="size-pricing">
+                            <h4 class="size-title">Available Sizes & Pricing</h4>
+                            <div class="size-grid">
+                                <div class="size-item">
+                                    <div class="size-label">S</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">M</div>
+                                    <div class="size-price price-tag">â¹499</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">L</div>
+                                    <div class="size-price price-tag">â¹479</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XL</div>
+                                    <div class="size-price price-tag">â¹509</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">XXL</div>
+                                    <div class="size-price price-tag">â¹519</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">3XL</div>
+                                    <div class="size-price price-tag">â¹529</div>
+                                </div>
+                                <div class="size-item">
+                                    <div class="size-label">4XL</div>
+                                    <div class="size-price price-tag">â¹539</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Premium Clothing Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sizeItems = document.querySelectorAll('.size-item');
+            sizeItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    sizeItems.forEach(i => {
+                        i.style.background = 'white';
+                        i.style.color = 'black';
+                    });
+                    this.style.background = '#007bff';
+                    this.style.color = 'white';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
