@@ -543,7 +543,7 @@
 
         .gallery-item img {
             width: 100%;
-            height: 350px;
+            height: 400px;
             object-fit: contain;
             object-position: center;
             transition: transform 0.4s ease;
@@ -692,6 +692,16 @@
             .order-section {
                 padding: 80px 30px;
             }
+
+            .product-image {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            .product-image img {
+                max-height: 500px;
+                width: 100%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -718,7 +728,7 @@
             }
 
             .gallery-item img {
-                height: 250px;
+                height: 300px;
             }
 
             .lightbox-close {
@@ -729,6 +739,25 @@
             .lightbox-nav {
                 font-size: 2em;
                 padding: 15px;
+            }
+
+            .product-image {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            .product-image img {
+                max-height: 400px;
+                width: 100%;
+            }
+
+            .gallery-item {
+                width: 100%;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 250px;
             }
         }
     </style>
@@ -856,7 +885,7 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(0)">
-                    <img src="img/2.jpg" alt="Front View">
+                    <img src="img/1.jpg" alt="Front View">
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-title">Front View</div>
                         <div class="gallery-overlay-text">Elegant front design with intricate embroidery</div>
@@ -888,7 +917,7 @@
                 </div>
                 
                 <div class="gallery-item" onclick="openLightbox(4)">
-                    <img src="img/1.jpg" alt="Embroidery Detail">
+                    <img src="img/2.jpg" alt="Embroidery Detail">
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-title">Embroidery Detail</div>
                         <div class="gallery-overlay-text">Close-up of intricate sequence work</div>
@@ -940,11 +969,11 @@
     <script>
         // Gallery images array
         const galleryImages = [
-            'img/2.jpg',
+            'img/1.jpg',
             'img/6246607900415561503.jpg',
             'img/6246607900415561505.jpg',
             'img/6246607900415561507.jpg',
-            'img/1.jpg'
+            'img/2.jpg'
         ];
 
         let currentImageIndex = 0;
@@ -1010,4 +1039,3 @@
     </script>
 </body>
 </html>
-
