@@ -219,11 +219,15 @@
         .product-image img {
             width: 100%;
             height: auto;
+            max-height: 700px;
+            object-fit: contain;
+            object-position: center;
             border-radius: 12px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.12);
             transition: all 0.4s ease;
             position: relative;
             z-index: 2;
+            background: #f8f8f8;
         }
 
         .product-image img:hover {
@@ -540,8 +544,10 @@
         .gallery-item img {
             width: 100%;
             height: 350px;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center;
             transition: transform 0.4s ease;
+            background: #f8f8f8;
         }
 
         .gallery-item:hover img {
@@ -613,8 +619,11 @@
         .lightbox img {
             max-width: 100%;
             max-height: 90vh;
+            object-fit: contain;
+            object-position: center;
             border-radius: 8px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            background: #fff;
         }
 
         .lightbox-close {
@@ -847,7 +856,7 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(0)">
-                    <img src="img/2jpg" alt="Front View">
+                    <img src="img/2.jpg" alt="Front View">
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-title">Front View</div>
                         <div class="gallery-overlay-text">Elegant front design with intricate embroidery</div>
@@ -931,7 +940,7 @@
     <script>
         // Gallery images array
         const galleryImages = [
-            'img/2jpg',
+            'img/2.jpg',
             'img/6246607900415561503.jpg',
             'img/6246607900415561505.jpg',
             'img/6246607900415561507.jpg',
@@ -1001,3 +1010,4 @@
     </script>
 </body>
 </html>
+
